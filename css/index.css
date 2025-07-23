@@ -226,12 +226,30 @@ body {
     font-weight: bold;
     z-index: 1;
 }
+.live-github-btn {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.3s ease;
+    font-weight: bold;
+    z-index: 1;
+}
 
 .project-card:hover .live-link-btn {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1.05);
 }
-
+.project-card:hover .live-github-btn {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+}
 .project-card:hover .card-img-top {
     filter: blur(5px);
 }
