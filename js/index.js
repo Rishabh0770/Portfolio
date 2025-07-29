@@ -4,10 +4,12 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   
+  
   // ===============================
   // Initialize Theme from LocalStorage
   // ===============================
   initializeTheme();
+
 
   // ===============================
   // Tech Slider: Seamless infinite scroll
@@ -17,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Duplicate slider content to make it loop smoothly
     track.innerHTML += track.innerHTML;
   }
+
 
   // ===============================
   // Theme Toggle Logic
@@ -40,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
 // ===============================
 // Function: Apply saved theme from localStorage
 // ===============================
@@ -54,6 +58,7 @@ function initializeTheme() {
   themeIcon.className = savedTheme === 'light' ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
 }
 
+
 // ===============================
 // AOS (Animate On Scroll) Initialization
 // ===============================
@@ -61,3 +66,73 @@ AOS.init({
   duration: 1000, // Animation duration in milliseconds
   // once: true // Uncomment if you want animation only once
 });
+
+
+// ================================
+// Drag & Drop for Hobbies
+// ================================
+const hobbiesBox = document.getElementById('hobbiesBox');
+const hobbies = document.querySelectorAll('.hobby');
+
+hobbiesBox.style.position = 'relative'; // So children can use absolute positioning
+
+// Make each hobby draggable manually
+hobbies.forEach(hobby => {
+  hobby.style.position = 'absolute';
+  hobby.addEventListener('mousedown', startDrag);
+});
+
+let activeHobby = null;
+let offsetX = 0;
+let offsetY = 0;
+
+function startDrag(e) {
+  activeHobby = e.target;
+  const rect = activeHobby.getBoundingClientRect();
+  offsetX = e.clientX - rect.left;
+  offsetY = e.clientY - rect.top;
+
+  document.addEventListener('mousemove', dragMove);
+  document.addEventListener('mouseup', endDrag);
+}
+
+function dragMove(e) {
+  if (!activeHobby) return;
+
+  const boxRect = hobbiesBox.getBoundingClientRect();
+  const x = e.clientX - boxRect.left - offsetX;
+  const y = e.clientY - boxRect.top - offsetY;
+
+  activeHobby.style.left = `${x}px`;
+  activeHobby.style.top = `${y}px`;
+}
+
+function endDrag() {
+  document.removeEventListener('mousemove', dragMove);
+  document.removeEventListener('mouseup', endDrag);
+  activeHobby = null;
+}
+
+
+// ================================
+// Scroll Reveal Animation
+// ================================
+const revealElements = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+  const revealPoint = 150;
+
+  revealElements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < windowHeight - revealPoint) {
+      el.classList.add('active');
+    } else {
+      el.classList.remove('active');
+    }
+  });
+}
+
+// Attach scroll listener
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
