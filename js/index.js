@@ -1,3 +1,10 @@
+/*
+ * index.js - Custom JS for Portfolio Website
+ * Author: Rishav Kumar
+ * Last Updated: July 30, 2025
+ * Features: Theme toggle, AOS, tech slider loop, scroll reveal
+ */
+
 // ======================================================
 // INDEX.JS | Main Script for Theme, Slider & AOS
 // ======================================================

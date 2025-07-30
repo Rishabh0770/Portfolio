@@ -312,8 +312,6 @@ body {
     100% { transform: translateY(0); opacity: 1; }
 }
 
-
-
 /* === CONTACT SECTION STYLES (My CV) === */
 .contact-section {
   display: flex;
