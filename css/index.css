@@ -263,6 +263,50 @@ body {
     border-radius: 10px;
 }
 
+/* === VIEW MORE PROJECTS BUTTON === */
+.view-more-projects-btn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid var(--hover-color);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 24px rgba(255, 69, 0, 0.15);
+}
+
+.view-more-projects-btn:hover {
+  background-color: var(--hover-color);
+  color: var(--background-color);
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(255, 69, 0, 0.3);
+}
+
+/* Heartbeat animation for the View More Projects button */
+@keyframes zoominout {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+.view-more-projects-btn.zoominout {
+  animation: zoominout 2.5s infinite;
+}
+
+/* === EXTRA PROJECTS SECTION === */
+.extra-projects.hidden {
+  display: none;
+}
+
+.extra-projects {
+  transition: all 0.4s ease;
+}
+
 /* =====================================================
    CONTACT SECTION - SOCIAL ICONS
 ===================================================== */
@@ -363,9 +407,11 @@ body {
 .contact-button button {
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  border: none;
+ 
+    border: 2px solid var(--hover-color);
+  border-radius: 20px;
   padding: 14px 28px;
-  border-radius: 14px;
+
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
@@ -386,7 +432,6 @@ body {
 .contact-button i {
   font-size: 1rem;
 }
-
 /* === RESPONSIVE (MOBILE) === */
 @media (max-width: 768px) {
   .contact-section {
@@ -494,4 +539,3 @@ body {
     background-color: var(--background-color);
     color: var(--secondary-color);
 }
-

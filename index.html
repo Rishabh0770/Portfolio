@@ -154,7 +154,7 @@
         <div class="row text-center m-0">
           <h2 class="section-head display-6 fw-bold" data-aos="fade-down">Projects</h2>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 m-0">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 m-0" id="projectsGrid">
           <div class="col">
             <div class="card project-card h-100" data-aos="fade-up" data-aos-delay="0">
               <div class="card-img-wrapper">
@@ -265,6 +265,66 @@
               </div>
             </div>
           </div>
+          <!-- Extra Projects Hidden Initially -->
+          <div class="col d-none extra-project">
+            <div class="card project-card h-100" data-aos="fade-up" data-aos-delay="200">
+              <div class="card-img-wrapper">
+                <img src="./imgs/chatbot.png" class="card-img-top" alt="AI-chatbot-landing-page">
+                <a href="https://rishabh0770.github.io/AI-chatbot/" class="live-link-btn" target="_blank" rel="noopener noreferrer">View Live</a>
+                <a href="https://github.com/Rishabh0770/AI-chatbot" class="live-github-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">AI-Chatbot</h5>
+                <p class="card-text">A smart AI-chatbot with voice recognition, image upload support, and API integration — enabling users to interact naturally, ask questions, and explore projects with real-time AI responses.</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="badge">HTML</span>
+                    <span class="badge">CSS</span>
+                    <span class="badge">JavaScript</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-none extra-project">
+            <div class="card project-card h-100" data-aos="fade-up" data-aos-delay="0">
+              <div class="card-img-wrapper">
+                <img src="./imgs/portfolio.png" class="card-img-top" alt="portfolio-landing-page">
+                <a href="https://rishabh0770.github.io/Portfolio/" class="live-link-btn" target="_blank" rel="noopener noreferrer">View Live</a>
+                <a href="https://github.com/Rishabh0770/Portfolio" class="live-github-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">My Portfolio</h5>
+                <p class="card-text">Responsive website created to give a brief introduction about myself through front-end development.</p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge">HTML5</span>
+                  <span class="badge">CSS3 (Bootstrap5)</span>
+                  <span class="badge">JavaScript</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-none extra-project">
+            <div class="card project-card h-100" data-aos="fade-up" data-aos-delay="100">
+              <div class="card-img-wrapper">
+                <img src="./imgs/weather-forecast.png" class="card-img-top" alt="Weather-Forecast-landing-page">
+                <a href="https://rishabh0770.github.io/Weather-website/" class="live-link-btn" target="_blank" rel="noopener noreferrer">View Live</a>
+                <a href="https://github.com/Rishabh0770/Weather-website" class="live-github-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Weather Forecast</h5>
+                <p class="card-text">A responsive web application that displays real-time weather data using the OpenWeatherMap API service.</p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge">HTML</span>
+                  <span class="badge">CSS </span>
+                  <span class="badge">JavaScript</span>
+                  <span class="badge">REST API</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- View More Button -->
+        <div class="text-center mt-4">
+        <button id="viewMoreBtn" class="view-more-projects-btn zoominout">View More Projects</button>
         </div>
       </div>
     </main>
@@ -272,19 +332,19 @@
 
 <section id="contact" class="contact-section" data-aos="fade-down" data-aos-delay="200">
   <main>
-  <div class="contact-wrapper">
-    <div class="contact-content">
-      <div class="contact-text">
-        <h2>Hiring?</h2>
-        <p>I’m Rishav, a passionate Full Stack Web Developer with a strong foundation in HTML, CSS, JavaScript, PHP, and MySQL. As a recent Computer Science graduate, I'm constantly learning and experimenting with real-world projects to sharpen my skills. I’m excited to grow as a developer and contribute to impactful web solutions that solve real problems.</p>
-      </div>
-      <div class="contact-button">
-        <a href="pdf/Rishav_CV.pdf" target="_blank" rel="noopener noreferrer">
+    <div class="contact-wrapper">
+      <div class="contact-content">
+        <div class="contact-text">
+          <h2>Hiring?</h2>
+          <p>I’m Rishav, a passionate Full Stack Web Developer with a strong foundation in HTML, CSS, JavaScript, PHP, and MySQL. As a recent Computer Science graduate, I'm constantly learning and experimenting with real-world projects to sharpen my skills. I’m excited to grow as a developer and contribute to impactful web solutions that solve real problems.</p>
+        </div>
+        <div class="contact-button">
+          <a href="pdf/Rishav_CV.pdf" target="_blank" rel="noopener noreferrer">
           <button>Check out my CV<i class="fas fa-arrow-up-right-from-square"></i></button>
-        </a>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
   </main>
 </section>
 

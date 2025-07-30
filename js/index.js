@@ -11,12 +11,10 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   
-
   // ===============================
   // Initialize Theme from LocalStorage
   // ===============================
   initializeTheme();
-
 
   // ===============================
   // Tech Slider: Seamless infinite scroll
@@ -26,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Duplicate slider content to make it loop smoothly
     track.innerHTML += track.innerHTML;
   }
-
 
   // ===============================
   // Theme Toggle Logic
@@ -65,7 +62,6 @@ function initializeTheme() {
   themeIcon.className = savedTheme === 'light' ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
 }
 
-
 // ===============================
 // AOS (Animate On Scroll) Initialization
 // ===============================
@@ -73,8 +69,6 @@ AOS.init({
   duration: 1000, // Animation duration in milliseconds
   // once: true // Uncomment if you want animation only once
 });
-
-
 
 // ================================
 // Scroll Reveal Animation
@@ -98,3 +92,24 @@ function revealOnScroll() {
 // Attach scroll listener
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
+
+
+// ================================
+// View More Projects Toggle
+// ================================
+document.addEventListener("DOMContentLoaded", () => {
+  const viewMoreBtn = document.getElementById("viewMoreBtn");
+  const extraProjects = document.querySelectorAll(".extra-project");
+
+  viewMoreBtn.addEventListener("click", () => {
+    extraProjects.forEach(card => card.classList.toggle("d-none"));
+
+    // Check if first extra project is visible
+    if (extraProjects[0] && !extraProjects[0].classList.contains("d-none")) {
+      viewMoreBtn.textContent = "Show Less Projects";
+    } else {
+      viewMoreBtn.textContent = "View More Projects";
+    }
+  });
+});
+
