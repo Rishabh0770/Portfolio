@@ -133,21 +133,20 @@ body {
   box-shadow: 0 6px 20px rgba(255, 111, 97, 0.15);
   margin-top: 0.75rem;
   white-space: nowrap;
+  margin-left: 8px;
 }
 
 /* Mobile: Center button and adjust padding */
 @media (max-width: 767.98px) {
   .book-call-btn {
     display: inline-block;
-    margin-left: 0;
+    margin-left: 10px;
     margin-right: 0;
     padding: 10px 20px;
     font-size: 0.95rem;
     max-width: max-content;
   }
 }
-
-
 
 .book-call-btn:hover {
   background-color: var(--hover-color);
