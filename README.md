@@ -1,71 +1,74 @@
-# 🚀 Rishav Kumar — Portfolio Website
+<h1 align="center">🌐 Rishav Kumar — Portfolio Website 🚀</h1>
 
-[![Netlify Status](https://img.shields.io/badge/Live%20Site-Visit%20Now-brightgreen?style=for-the-badge&logo=netlify)](https://rishav-kumar-portfolio.netlify.app/)
-[![GitHub Repo](https://img.shields.io/badge/View%20Code-On%20GitHub-blue?style=for-the-badge&logo=github)](https://github.com/Rishabh0770/rishav-portfolio)
-
----
-
-## 👋 About Me
-
-Hi, I'm **Rishav Kumar** — a passionate, self-driven **Web Developer** with a specialization in front-end development using:
-
-- ✅ HTML5, CSS3, JavaScript
-- ✅ Bootstrap 5
-- ✅ PHP & MySQL (backend ready!)
-- ✅ Git, GitHub & deployment using Netlify
-
-This portfolio website highlights my work, skills, projects, and contact details in a clean, responsive, and interactive design. 📱💻
+<p align="center">
+  <a href="https://rishav-kumar-portfolio.netlify.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Site-Netlify-success?style=flat-square&logo=netlify" />
+  </a>
+  <a href="https://github.com/Rishabh0770/rishav-portfolio" target="_blank">
+    <img src="https://img.shields.io/badge/View%20Code-GitHub-blue?style=flat-square&logo=github" />
+  </a>
+  <img src="https://img.shields.io/badge/Made%20with-HTML%2C%20CSS%2C%20JS-informational?style=flat-square&logo=javascript" />
+</p>
 
 ---
 
-## 🌐 Live Preview
+## ✨ About Me
 
-🔗 **Visit Now:** [rishav-kumar-portfolio.netlify.app](https://rishav-kumar-portfolio.netlify.app/)
-
----
-
-## 📸 Screenshots
-
-| Home | About | Projects |
-|------|-------|----------|
-| ![Home](assets/screenshots/home.png) | ![About](assets/screenshots/about.png) | ![Projects](assets/screenshots/projects.png) |
-
-> 📝 *Screenshots go in a `screenshots/` folder under `assets/` — you can upload them later or remove this section.*
+> 👋 Hey there! I’m **Rishav Kumar**, a **Computer Science & Engineering graduate** and an aspiring **Full-Stack Web Developer**.  
+> This is my personal portfolio website where I showcase my skills, projects, and journey as a dev in public.  
+> Built from scratch with ❤️ using **HTML, CSS, Bootstrap, JavaScript**, and deployed via **Netlify**.
 
 ---
 
-## ✨ Key Features
+## 🌍 Live Site
 
-- 📱 Fully responsive layout (Bootstrap-powered)
-- 🧑‍💻 Project showcase with live/demo links
-- 🎨 Modern UI with custom styles
-- ☀️🌙 Light/Dark mode toggle
-- 📬 Contact form 
-- 📂 Clean folder structure & optimized code
+🔗 **Check it out here** → [rishav-kumar-portfolio.netlify.app](https://rishav-kumar-portfolio.netlify.app)
 
 ---
 
-## 🛠 Tech Stack
+## 🖼️ Preview
 
-- **Frontend:** HTML5, CSS3, JavaScript, Bootstrap 5
-- **Tools:** VS Code, Git, GitHub, Netlify
-- **Design Libraries:** AOS (scroll animations), Icons from Bootstrap
+<p align="center">
+  <img src="assets/screenshots/home.png" width="80%" alt="Homepage Screenshot" />
+</p>
+
+> You can replace this with more screenshots or a GIF walkthrough later!
 
 ---
 
-## 🚀 How to Use / Customize
+## 🛠️ Tech Stack & Tools
+
+| Tech | Description |
+|------|-------------|
+| ⚙️ **Frontend** | HTML5, CSS3, JavaScript |
+| 🎨 **Styling** | Bootstrap 5, Google Fonts, AOS |
+| 💾 **Backend-Ready** | PHP, MySQL (planned) |
+| 🛠️ **Tools** | VS Code, Git, GitHub, Netlify |
+
+---
+
+## 🚀 Features
+
+- 📱 **Responsive Design** — Mobile-first, fully responsive layout
+- 🧠 **Interactive UI** — Animated transitions and AOS scroll effects
+- 🌗 **Dark Mode** — Light/Dark toggle with theme persistence
+- 🧑‍💼 **Projects Section** — Showcasing live apps and GitHub links
+- 📬 **Contact Form** — Form validation (backend ready!)
+- ✨ **Modern Design** — Clean layout and smooth UX
+
+---
+
+## 📂 Folder Structure
 
 ```bash
-# 1. Clone this repo
-git clone https://github.com/Rishabh0770/rishav-portfolio.git
-
-# 2. Open with VS Code or any code editor
-
-# 3. Customize content inside:
-#    ┣ index.html
-#    ┣ about.html
-#    ┣ projects.html
-#    ┣ contact.html
-#    ┗ style.css
-
-# 4. Deploy it using Netlify, GitHub Pages, or Vercel
+rishav-portfolio/
+├── assets/
+│   ├── css/
+│   ├── js/
+│   ├── images/
+│   └── screenshots/
+├── index.html
+├── about.html
+├── projects.html
+├── contact.html
+└── README.md
