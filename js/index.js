@@ -1,7 +1,7 @@
 /*
  * index.js - Custom JS for Portfolio Website
  * Author: Rishav Kumar
- * Last Updated: July 30, 2025
+ * Last Updated: October 24, 2025
  * Features: Theme toggle, AOS, tech slider loop, scroll reveal
  */
 
@@ -93,6 +93,69 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
+
+// ================================
+// Active Navigation Scroll Spy
+// ================================
+function updateActiveNavLink() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+  
+  let currentSection = '';
+  const scrollPosition = window.scrollY + 100; // Offset for fixed navbar
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    
+    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      currentSection = section.getAttribute('id');
+    }
+  });
+  
+  // Remove active class from all nav links
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+  });
+  
+  // Add active class to current section nav link
+  if (currentSection) {
+    const activeLink = document.querySelector(`.nav-link[href="#${currentSection}"]`);
+    if (activeLink) {
+      activeLink.classList.add('active');
+    }
+  }
+}
+
+// Attach scroll listener for nav spy
+window.addEventListener('scroll', updateActiveNavLink);
+window.addEventListener('load', updateActiveNavLink);
+
+// ================================
+// Smooth Scrolling for Nav Links
+// ================================
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      const targetId = link.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+      
+      if (targetSection) {
+        const headerHeight = document.querySelector('.navbar').offsetHeight;
+        const targetPosition = targetSection.offsetTop - headerHeight;
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
 
 // ================================
 // View More Projects Toggle

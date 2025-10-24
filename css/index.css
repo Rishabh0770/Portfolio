@@ -62,10 +62,11 @@ body {
     color: var(--secondary-color);
 }
 
-.active {
-    color: var(--hover-color) !important;
-    background-color: var(--primary-color);
+.nav-link.active {
+    color: var(--background-color) !important;
+    background-color: var(--secondary-color) !important;
     transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 111, 97, 0.3);
 }
 
 .navbar-brand:hover {
@@ -561,3 +562,4 @@ body {
     background-color: var(--background-color);
     color: var(--secondary-color);
 }
+
