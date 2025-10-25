@@ -169,8 +169,192 @@ body {
 }
 
 /* =====================================================
-   ABOUT SECTION - CARDS
+   ABOUT SECTION - ENHANCED
 ===================================================== */
+.about-details {
+    color: var(--text-color);
+}
+
+.about-subtitle {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    color: var(--text-color);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.career-objective {
+    background: var(--card-bg);
+    border: 1px solid var(--secondary-color);
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+.career-objective:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 111, 97, 0.15);
+}
+
+.objective-title {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.objective-text {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.about-info-card {
+    background: var(--card-bg);
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+    padding: 30px;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+    transition: all 0.3s ease;
+}
+
+.about-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 111, 97, 0.2);
+}
+
+.info-card-title {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.info-items {
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 111, 97, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.info-item:hover {
+    background: rgba(255, 111, 97, 0.05);
+    padding: 12px 10px;
+    transform: translateX(3px);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-icon {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    width: 25px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.info-label {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.info-value {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.availability-status {
+    color: #28a745;
+    position: relative;
+}
+
+.availability-status::before {
+    content: '●';
+    color: #28a745;
+    margin-right: 5px;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+}
+
+.about-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-download-cv,
+.btn-schedule-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-download-cv {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-download-cv:hover {
+    background: var(--hover-color);
+    color: var(--background-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 111, 97, 0.3);
+}
+
+.btn-schedule-call {
+    background: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-schedule-call:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Service Cards - Original About Cards */
 .card {
     color: var(--text-color);
     background: var(--card-bg);
@@ -181,6 +365,603 @@ body {
 
 .card:hover {
     box-shadow: 0 12px 32px rgba(255, 111, 97, 0.2);
+}
+
+/* =====================================================
+   SERVICE CARDS - ENHANCED ANIMATIONS
+===================================================== */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 111, 97, 0.1), 
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(255, 111, 97, 0.25);
+    border-color: var(--hover-color);
+}
+
+.service-card:hover::before {
+    left: 100%;
+}
+
+.service-icon {
+    color: var(--secondary-color);
+    transition: all 0.4s ease;
+    margin-bottom: 15px;
+}
+
+.service-card:hover .service-icon {
+    transform: rotateY(360deg) scale(1.1);
+    color: var(--hover-color);
+    text-shadow: 0 4px 12px rgba(255, 111, 97, 0.3);
+}
+
+.service-card .card-title {
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.service-card:hover .card-title {
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.service-card .card-text {
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+.service-card:hover .card-text {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+/* Service cards - no floating animation */
+
+/* Mobile responsive for about section */
+@media (max-width: 992px) {
+    .about-info-card {
+        position: static;
+        margin-top: 20px;
+    }
+    
+    .about-actions {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-actions {
+        flex-direction: column;
+    }
+}
+
+/* =====================================================
+   EXPERIENCE SECTION - TIMELINE
+===================================================== */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--secondary-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 80px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 21px;
+    top: 10px;
+    width: 18px;
+    height: 18px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    border: 3px solid var(--background-color);
+    z-index: 2;
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 0 0 rgba(255, 111, 97, 0.4);
+}
+
+.timeline-marker:hover {
+    animation-play-state: paused;
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(255, 111, 97, 0.6);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 111, 97, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 111, 97, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 111, 97, 0);
+    }
+}
+
+.experience-card {
+    background: var(--card-bg);
+    border: 1px solid var(--secondary-color);
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    opacity: 0.9;
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 111, 97, 0.1), 
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(255, 111, 97, 0.3);
+    border-color: var(--hover-color);
+    opacity: 1;
+}
+
+.experience-card:hover::before {
+    left: 100%;
+}
+
+/* Timeline items - let AOS handle animations */
+
+.experience-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.experience-title {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.experience-company {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.experience-duration {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.experience-location {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.experience-location i {
+    color: var(--secondary-color);
+    margin-right: 5px;
+}
+
+.experience-responsibilities {
+    color: var(--text-color);
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.experience-responsibilities li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.experience-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-badge {
+    background: rgba(255, 111, 97, 0.1);
+    color: var(--secondary-color);
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid var(--secondary-color);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-badge:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 111, 97, 0.4);
+}
+
+.tech-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.tech-badge:hover::before {
+    left: 100%;
+}
+
+/* Mobile responsive for timeline */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 15px;
+    }
+    
+    .timeline-marker {
+        left: 6px;
+    }
+    
+    .timeline-item {
+        padding-left: 50px;
+    }
+    
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+/* =====================================================
+   EDUCATION SECTION
+===================================================== */
+.education-card {
+    background: var(--card-bg);
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 111, 97, 0.2);
+}
+
+.education-icon {
+    color: var(--secondary-color);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.education-title {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.education-field {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.education-institution,
+.education-duration,
+.education-grade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.education-institution i,
+.education-duration i,
+.education-grade i {
+    color: var(--secondary-color);
+}
+
+.education-coursework {
+    margin-top: 20px;
+}
+
+.education-coursework h6 {
+    color: var(--secondary-color);
+    margin-bottom: 12px;
+}
+
+.coursework-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.coursework-tag {
+    background: rgba(255, 111, 97, 0.1);
+    color: var(--secondary-color);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid var(--secondary-color);
+}
+
+/* Certifications */
+.certifications-container {
+    background: var(--card-bg);
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.certifications-title {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.certifications-title i {
+    margin-right: 10px;
+}
+
+.certification-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.certification-item:hover {
+    background: rgba(255, 111, 97, 0.05);
+    border-left-color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+.cert-icon {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.cert-content h5 {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.cert-provider {
+    color: var(--text-color);
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 4px;
+}
+
+.cert-year {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* =====================================================
+   SKILLS SECTION - ENHANCED
+===================================================== */
+#skills-section {
+    background-color: var(--card-bg);
+}
+
+.skills-category {
+    background: var(--background-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+    padding: 30px;
+    height: 100%;
+}
+
+.skills-category-title {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skill-item {
+    margin-bottom: 25px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.skill-name {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.skill-percentage {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.skill-bar {
+    background: rgba(255, 111, 97, 0.1);
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--secondary-color), var(--hover-color));
+    border-radius: 10px;
+    width: 0%;
+    transition: width 2s ease-in-out;
+    position: relative;
+}
+
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Tools Grid */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tool-item {
+    background: var(--background-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tool-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 111, 97, 0.2);
+    border-color: var(--hover-color);
+}
+
+.tool-item i {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.tool-item span {
+    color: var(--text-color);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.tool-level {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+/* Animate skill bars on scroll */
+.skill-progress.animate {
+    width: var(--target-width, 0%) !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .tool-item {
+        padding: 15px;
+    }
+    
+    .tool-item i {
+        font-size: 1.5rem;
+    }
 }
 
 /* =====================================================
@@ -330,6 +1111,137 @@ body {
 
 .extra-projects {
   transition: all 0.4s ease;
+}
+
+/* =====================================================
+   TESTIMONIALS SECTION
+===================================================== */
+#testimonials-section {
+    background-color: var(--card-bg);
+}
+
+.testimonial-card {
+    background: var(--background-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 111, 97, 0.15);
+    border-color: var(--hover-color);
+}
+
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--hover-color));
+}
+
+.testimonial-content {
+    margin-bottom: 25px;
+}
+
+.quote-icon {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.testimonial-text {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0;
+}
+
+.testimonial-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.author-info {
+    flex: 1;
+}
+
+.author-name {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.author-position {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.testimonial-rating {
+    display: flex;
+    gap: 2px;
+    margin-left: 10px;
+}
+
+.testimonial-rating i {
+    color: #ffc107;
+    font-size: 0.9rem;
+}
+
+/* Testimonial Card Animation */
+.testimonial-card {
+    animation: float 6s ease-in-out infinite;
+}
+
+.testimonial-card:nth-child(2) {
+    animation-delay: -2s;
+}
+
+.testimonial-card:nth-child(3) {
+    animation-delay: -4s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Mobile responsive for testimonials */
+@media (max-width: 768px) {
+    .testimonial-author {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .testimonial-rating {
+        margin-left: 0;
+    }
+    
+    .testimonial-card {
+        animation: none;
+    }
+    
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+    }
 }
 
 /* =====================================================
@@ -553,6 +1465,179 @@ body {
     background-color: var(--primary-color);
     color: var(--background-color);
     transform: scale(1.05);
+}
+
+/* =====================================================
+   TESTIMONIALS SLIDER - Similar to Tech Slider but Slower
+===================================================== */
+.testimonials-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.testimonials-slider-track {
+    display: flex;
+    width: max-content;
+    animation: testimonial-scroll 40s linear infinite;
+}
+
+.testimonial-slide {
+    flex: 0 0 400px;
+    margin: 0 20px;
+}
+
+.testimonial-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+}
+
+.quote-icon {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    color: var(--text-color);
+}
+
+.testimonial-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.author-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.3;
+}
+
+.author-position {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin: 0;
+    margin-top: 2px;
+    line-height: 1.2;
+}
+
+.testimonial-rating {
+    color: #ffd700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.testimonial-rating i {
+    margin: 0 1px;
+}
+
+@keyframes testimonial-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Pause animation on hover */
+.testimonials-slider:hover .testimonials-slider-track {
+    animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .testimonial-slide {
+        flex: 0 0 300px;
+        margin: 0 15px;
+    }
+    
+    .testimonial-card {
+        padding: 20px;
+        min-height: 300px;
+    }
+    
+    .testimonials-slider-track {
+        animation: testimonial-scroll 35s linear infinite;
+    }
+    
+    /* Center author info on mobile */
+    .testimonial-author {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .author-info {
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-slide {
+        flex: 0 0 280px;
+        margin: 0 10px;
+    }
+    
+    .testimonial-card {
+        padding: 18px;
+        min-height: 280px;
+    }
+    
+    /* Additional mobile centering for smaller screens */
+    .testimonial-author {
+        gap: 8px;
+    }
+    
+    .author-name {
+        font-size: 1rem;
+    }
+    
+    .author-position {
+        font-size: 0.85rem;
+    }
 }
 
 /* =====================================================

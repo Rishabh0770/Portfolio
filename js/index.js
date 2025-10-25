@@ -26,6 +26,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ===============================
+  // Testimonials Slider: Seamless infinite scroll
+  // ===============================
+  const testimonialsTrack = document.querySelector('.testimonials-slider-track');
+  if (testimonialsTrack) {
+    // Duplicate slider content to make it loop smoothly
+    testimonialsTrack.innerHTML += testimonialsTrack.innerHTML;
+  }
+
+  // ===============================
   // Theme Toggle Logic
   // ===============================
   const themeToggle = document.getElementById('themeToggle');
@@ -130,6 +139,35 @@ function updateActiveNavLink() {
 // Attach scroll listener for nav spy
 window.addEventListener('scroll', updateActiveNavLink);
 window.addEventListener('load', updateActiveNavLink);
+
+// ================================
+// Skills Progress Bar Animation
+// ================================
+function animateSkillBars() {
+  const skillBars = document.querySelectorAll('.skill-progress');
+  const skillsSection = document.getElementById('skills-section');
+  
+  if (!skillsSection) return;
+  
+  const sectionTop = skillsSection.offsetTop;
+  const sectionHeight = skillsSection.offsetHeight;
+  const scrollPosition = window.scrollY + window.innerHeight;
+  
+  if (scrollPosition > sectionTop + 100) {
+    skillBars.forEach(bar => {
+      if (!bar.classList.contains('animate')) {
+        const targetWidth = bar.getAttribute('data-width');
+        bar.style.setProperty('--target-width', targetWidth);
+        bar.classList.add('animate');
+        bar.style.width = targetWidth;
+      }
+    });
+  }
+}
+
+// Attach scroll listener for skill bars
+window.addEventListener('scroll', animateSkillBars);
+window.addEventListener('load', animateSkillBars);
 
 // ================================
 // Smooth Scrolling for Nav Links
