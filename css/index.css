@@ -32,11 +32,19 @@
     box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background: var(--background-color);
     background: radial-gradient(circle, var(--background-color) 75%, rgba(255, 111, 97, 1) 100%);
     overflow-x: hidden;
     transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 100vw;
+    -webkit-text-size-adjust: 100%;
 }
 
 /* =====================================================
