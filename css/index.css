@@ -1483,6 +1483,7 @@ body {
     position: relative;
     width: 100%;
     margin-top: 2rem;
+    opacity: 1;
 }
 
 .testimonials-slider-track {
@@ -1608,7 +1609,7 @@ body {
     }
     
     .testimonials-slider-track {
-        animation: testimonial-scroll 35s linear infinite;
+        animation: testimonial-scroll 30s linear infinite;
     }
     
     /* Center author info on mobile */
