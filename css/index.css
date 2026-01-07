@@ -2742,21 +2742,48 @@ footer {
 
 /* Footer Mobile Responsive */
 @media (max-width: 768px) {
+    footer .container {
+        text-align: center;
+    }
+    
     .footer-title {
         font-size: 0.85rem;
+        text-align: center;
+    }
+    
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .footer-links li {
         font-size: 0.8rem;
         margin-bottom: 0.6rem;
+        text-align: center;
     }
     
     .footer-social {
         justify-content: center;
+        margin-bottom: 1rem;
     }
     
     .footer-copyright {
         font-size: 0.75rem;
+        text-align: center;
+    }
+    
+    footer .row {
+        text-align: center;
+    }
+    
+    footer .col-md-3, 
+    footer .col-12 {
+        margin-bottom: 1.5rem;
+    }
+    
+    footer .col-md-3:last-child {
+        margin-bottom: 0;
     }
 }
 
