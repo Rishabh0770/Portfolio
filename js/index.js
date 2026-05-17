@@ -26,15 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ===============================
-  // Testimonials Slider: Seamless infinite scroll
-  // ===============================
-  const testimonialsTrack = document.querySelector('.testimonials-slider-track');
-  if (testimonialsTrack) {
-    // Duplicate slider content to make it loop smoothly
-    testimonialsTrack.innerHTML += testimonialsTrack.innerHTML;
-  }
-
-  // ===============================
   // Theme Toggle Logic
   // ===============================
   const themeToggle = document.getElementById('themeToggle');
