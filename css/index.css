@@ -1347,9 +1347,9 @@ body {
 }
 
 .project-card:hover .live-link-btn {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
     transform: translate(-50%, -50%) scale(1.05);
 }
 
@@ -1376,9 +1376,9 @@ body {
 }
 
 .project-card:hover .live-github-btn {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
     transform: translate(-50%, -50%) scale(1.05);
 }
 
@@ -1428,7 +1428,7 @@ body {
 .live-github-btn:hover {
   background-color: var(--hover-color);
   color: var(--background-color);
-  transform: scale(1.05);
+    transform: translate(-50%, -50%) scale(1.05);
   box-shadow: 0 10px 28px rgba(255, 69, 0, 0.3);
 }
 
