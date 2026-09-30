@@ -2848,6 +2848,14 @@ body {
     background: linear-gradient(135deg, #D97757 0%, #A94D35 100%);
 }
 
+.chatgpt-color {
+    background: linear-gradient(135deg, #202123 0%, #343541 100%);
+}
+
+.gemini-color {
+    background: linear-gradient(135deg, #4285F4 0%, #8E63CE 100%);
+}
+
 .godaddy-color {
     background: linear-gradient(135deg, #191919 0%, #303030 100%);
 }
