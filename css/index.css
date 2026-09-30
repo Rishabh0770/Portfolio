@@ -2688,6 +2688,15 @@ body {
     height: 40px;
 }
 
+.tool-brand-logo--app-icon {
+    width: 48px;
+    height: 48px;
+    padding: 3px;
+    border-radius: 12px;
+    background: #fff;
+    object-fit: contain;
+}
+
 .tool-mark {
     font-size: 1.55rem;
     font-weight: 800;
