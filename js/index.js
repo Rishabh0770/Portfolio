@@ -187,20 +187,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ================================
-// View More Projects Toggle
+// Project Category Filters
 // ================================
 document.addEventListener("DOMContentLoaded", () => {
-  const viewMoreBtn = document.getElementById("viewMoreBtn");
-  const extraProjects = document.querySelectorAll(".extra-project");
+  const projectFilters = document.querySelectorAll("[data-project-filter]");
+  const projectItems = document.querySelectorAll(".project-item");
 
-  viewMoreBtn.addEventListener("click", () => {
-    extraProjects.forEach(card => card.classList.toggle("d-none"));
+  projectFilters.forEach((filter) => {
+    filter.addEventListener("click", () => {
+      const selectedCategory = filter.dataset.projectFilter;
 
-    // Check if first extra project is visible
-    if (extraProjects[0] && !extraProjects[0].classList.contains("d-none")) {
-      viewMoreBtn.textContent = "Show Less Projects";
-    } else {
-      viewMoreBtn.textContent = "View More Projects";
-    }
+      projectFilters.forEach((button) => {
+        const isActive = button === filter;
+        button.classList.toggle("active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+      });
+
+      projectItems.forEach((item) => {
+        item.hidden = selectedCategory !== "all" && item.dataset.projectCategory !== selectedCategory;
+      });
+
+      if (window.AOS) AOS.refreshHard();
+    });
   });
 });
