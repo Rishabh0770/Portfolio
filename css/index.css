@@ -2545,11 +2545,13 @@ body {
 
 .dm-tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+    gap: 24px;
     position: relative;
     z-index: 2;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1080px;
+    margin-inline: auto;
     animation: float-in 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
@@ -2603,24 +2605,25 @@ body {
 .dm-tool-icon:nth-child(14) { animation-delay: 0.75s; }
 
 .dm-tool-icon:hover {
-    transform: translateY(-15px) scale(1.15) rotateZ(5deg);
+    transform: translateY(-4px);
 }
 
 .tool-icon-wrapper {
-    width: 90px;
-    height: 90px;
-    border-radius: 16px;
+    width: 68px;
+    height: 68px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5rem;
+    font-size: 1.9rem;
     color: white;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.18);
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
     position: relative;
     overflow: hidden;
-    transform-style: preserve-3d;
-    animation: cube-rotate 6s linear infinite;
+    transform-style: flat;
+    animation: none;
 }
 
 @keyframes cube-rotate {
@@ -2636,7 +2639,9 @@ body {
 }
 
 .tool-icon-wrapper:hover {
-    animation: cube-rotate-fast 0.6s ease-in-out forwards;
+    transform: translateY(-2px) scale(1.04);
+    border-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.26);
 }
 
 @keyframes cube-rotate-fast {
@@ -2659,7 +2664,39 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-    border-radius: 16px;
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.tool-icon-wrapper > i,
+.tool-mark {
+    position: relative;
+    z-index: 1;
+}
+
+.tool-brand-logo {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.tool-brand-logo--favicon {
+    width: 40px;
+    height: 40px;
+}
+
+.tool-mark {
+    font-size: 1.55rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.dm-tool-icon:focus-visible .tool-icon-wrapper {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
 }
 
 .dm-tool-icon:hover .tool-icon-wrapper {
@@ -2779,6 +2816,63 @@ body {
     background: linear-gradient(135deg, #188FFF 0%, #00BCD4 100%);
 }
 
+.tiktok-color {
+    background: linear-gradient(135deg, #111111 0%, #262626 100%);
+}
+
+.meta-ai-color {
+    background: linear-gradient(135deg, #0866FF 0%, #0449B8 100%);
+}
+
+.pinterest-color {
+    background: linear-gradient(135deg, #E60023 0%, #B6001C 100%);
+}
+
+.merchant-center-color {
+    background: linear-gradient(135deg, #20A464 0%, #137A4B 100%);
+}
+
+.pomelli-color {
+    background: linear-gradient(135deg, #F7A46B 0%, #E86E5A 100%);
+}
+
+.clarity-color {
+    background: linear-gradient(135deg, #00A4EF 0%, #0878B9 100%);
+}
+
+.gtmetrix-color {
+    background: linear-gradient(135deg, #3975C5 0%, #234C83 100%);
+}
+
+.claude-color {
+    background: linear-gradient(135deg, #D97757 0%, #A94D35 100%);
+}
+
+.godaddy-color {
+    background: linear-gradient(135deg, #191919 0%, #303030 100%);
+}
+
+.amazon-seller-color {
+    background: linear-gradient(135deg, #232F3E 0%, #131A22 100%);
+}
+
+.screamingfrog-color {
+    background: linear-gradient(135deg, #6BAA32 0%, #3D721A 100%);
+}
+
+.brevo-color {
+    background: linear-gradient(135deg, #1A73E8 0%, #174EA6 100%);
+}
+
+.figma-color {
+    background: linear-gradient(135deg, #2C2C2C 0%, #171717 100%);
+}
+
+.photoshop-color {
+    background: linear-gradient(135deg, #001E36 0%, #082B4A 100%);
+    color: #31A8FF;
+}
+
 /* Zapier - Orange/Yellow */
 .zapier-color {
     background: linear-gradient(135deg, #FF6B35 0%, #FFA500 100%);
@@ -2787,14 +2881,14 @@ body {
 /* Responsive adjustments */
 @media (max-width: 992px) {
     .dm-tools-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+        gap: 20px;
     }
     
     .tool-icon-wrapper {
-        width: 80px;
-        height: 80px;
-        font-size: 2rem;
+        width: 64px;
+        height: 64px;
+        font-size: 1.75rem;
     }
     
     .tool-name {
@@ -2804,14 +2898,14 @@ body {
 
 @media (max-width: 768px) {
     .dm-tools-grid {
-        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(82px, 1fr));
+        gap: 16px;
     }
     
     .tool-icon-wrapper {
-        width: 75px;
-        height: 75px;
-        font-size: 1.8rem;
+        width: 58px;
+        height: 58px;
+        font-size: 1.6rem;
     }
     
     .tool-name {
