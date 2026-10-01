@@ -26,6 +26,37 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ===============================
+  // Premium Project Card Motion
+  // ===============================
+  const projectCards = document.querySelectorAll('.project-card');
+
+  projectCards.forEach((card) => {
+    const resetCard = () => {
+      card.style.setProperty('--rotate-x', '0deg');
+      card.style.setProperty('--rotate-y', '0deg');
+      card.style.setProperty('--glow-x', '50%');
+      card.style.setProperty('--glow-y', '50%');
+    };
+
+    card.addEventListener('pointermove', (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width;
+      const y = (event.clientY - rect.top) / rect.height;
+      const rotateY = (x - 0.5) * 12;
+      const rotateX = (0.5 - y) * 12;
+
+      card.style.setProperty('--rotate-x', `${rotateX}deg`);
+      card.style.setProperty('--rotate-y', `${rotateY}deg`);
+      card.style.setProperty('--glow-x', `${x * 100}%`);
+      card.style.setProperty('--glow-y', `${y * 100}%`);
+    });
+
+    card.addEventListener('pointerleave', resetCard);
+    card.addEventListener('pointercancel', resetCard);
+    resetCard();
+  });
+
+  // ===============================
   // Theme Toggle Logic
   // ===============================
   const themeToggle = document.getElementById('themeToggle');
