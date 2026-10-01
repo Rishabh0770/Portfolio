@@ -132,6 +132,12 @@ body {
     background-color: var(--secondary-color);
 }
 
+[data-bs-theme='light'] .sub-text {
+    color: #D9534F;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
 .book-call-btn {
   display: inline-block;
   background-color: var(--secondary-color);
