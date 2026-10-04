@@ -10,8 +10,7 @@ $('#latest').innerHTML=[...POSTS].sort((a,b)=>b.date.localeCompare(a.date)).slic
 const secs=$$('section[id]'),navA=$$('.links a');
 addEventListener('scroll',()=>{let c='';secs.forEach(s=>{if(scrollY>=s.offsetTop-120)c=s.id});navA.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='index.html#'+c))},{passive:true});
 // document lightbox
-const DOCS={'certificate-of-training':'Certificate of Training','training-completion-letter':'Training Completion Letter','experience-certificate':'Experience Certificate','relieving-letter':'Relieving Letter'};
 const lb=$('#lb'),lbimg=$('#lbimg');
 const closeLb=()=>{lb.hidden=true;document.body.style.overflow=''};
-document.addEventListener('click',e=>{const t=e.target.closest('[data-doc]');if(!t)return;const k=t.dataset.doc;lbimg.src='certs/'+k+'.jpg';lbimg.alt=DOCS[k];lb.hidden=false;document.body.style.overflow='hidden'});
+document.addEventListener('click',e=>{const t=e.target.closest('[data-doc]');if(!t)return;const image=t.querySelector('.im img');if(!image)return;lbimg.src=image.src;lbimg.alt=image.alt;lb.hidden=false;document.body.style.overflow='hidden'});
 lb.addEventListener('click',closeLb);addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
