@@ -1,3 +1,4 @@
+/* Optional per-project fields: "long" (extra paragraph) and "features" (array of bullet points) */
 const PROJECTS = [
  {
   "t": "Rajat Verma Portfolio",
@@ -12,7 +13,11 @@ const PROJECTS = [
    "Digital Marketing"
   ],
   "cat": "creative",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "rajat-verma-portfolio",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "Aiva Wellness",
@@ -27,7 +32,11 @@ const PROJECTS = [
    "Digital Marketing"
   ],
   "cat": "commerce",
-  "ongoing": true
+  "ongoing": true,
+  "slug": "aiva-wellness",
+  "status": "Ongoing",
+  "long": "",
+  "features": []
  },
  {
   "t": "Sangla On Wheels",
@@ -42,7 +51,11 @@ const PROJECTS = [
    "Bootstrap"
   ],
   "cat": "commerce",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "sangla-on-wheels",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "Shiva Studio",
@@ -57,7 +70,11 @@ const PROJECTS = [
    "JavaScript (Vanilla JS)"
   ],
   "cat": "creative",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "shiva-studio",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "Tyari.com",
@@ -71,7 +88,11 @@ const PROJECTS = [
    "JavaScript"
   ],
   "cat": "platforms",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "tyari-com",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "Anti-Plastic Brigade / NGO",
@@ -86,7 +107,11 @@ const PROJECTS = [
    "Bootstrap"
   ],
   "cat": "platforms",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "anti-plastic-brigade-ngo",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "NuBaCo",
@@ -101,7 +126,11 @@ const PROJECTS = [
    "JavaScript"
   ],
   "cat": "commerce",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "nubaco",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "JobHunt",
@@ -115,7 +144,11 @@ const PROJECTS = [
    "JavaScript"
   ],
   "cat": "platforms",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "jobhunt",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "KTS Physiotherapy",
@@ -130,7 +163,11 @@ const PROJECTS = [
    "JavaScript"
   ],
   "cat": "commerce",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "kts-physiotherapy",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "The Arch Space Design",
@@ -145,7 +182,11 @@ const PROJECTS = [
    "JavaScript"
   ],
   "cat": "commerce",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "the-arch-space-design",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "PDF Converter",
@@ -159,7 +200,11 @@ const PROJECTS = [
    "JavaScript"
   ],
   "cat": "tools",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "pdf-converter",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "QR Generator",
@@ -173,7 +218,11 @@ const PROJECTS = [
    "JavaScript"
   ],
   "cat": "tools",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "qr-generator",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "Web Blog App",
@@ -187,7 +236,11 @@ const PROJECTS = [
    "JavaScript"
   ],
   "cat": "platforms",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "web-blog-app",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "My Portfolio",
@@ -201,7 +254,11 @@ const PROJECTS = [
    "JavaScript"
   ],
   "cat": "creative",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "my-portfolio",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "Cherished Chapters",
@@ -216,7 +273,11 @@ const PROJECTS = [
    "JavaScript"
   ],
   "cat": "creative",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "cherished-chapters",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "Huntersteel",
@@ -230,7 +291,11 @@ const PROJECTS = [
    "JavaScript"
   ],
   "cat": "commerce",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "huntersteel",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "AskNex AI: Your Personal AI Assistant",
@@ -244,7 +309,11 @@ const PROJECTS = [
    "JavaScript"
   ],
   "cat": "tools",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "asknex-ai-your-personal-ai-assistant",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "PG Life",
@@ -260,7 +329,11 @@ const PROJECTS = [
    "PHP"
   ],
   "cat": "platforms",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "pg-life",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "AI-Chatbot",
@@ -274,7 +347,11 @@ const PROJECTS = [
    "JavaScript"
   ],
   "cat": "tools",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "ai-chatbot",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "Link-List",
@@ -287,7 +364,11 @@ const PROJECTS = [
    "CSS"
   ],
   "cat": "tools",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "link-list",
+  "status": "Completed",
+  "long": "",
+  "features": []
  },
  {
   "t": "Weather Forecast",
@@ -302,6 +383,10 @@ const PROJECTS = [
    "REST API"
   ],
   "cat": "tools",
-  "ongoing": false
+  "ongoing": false,
+  "slug": "weather-forecast",
+  "status": "Completed",
+  "long": "",
+  "features": []
  }
 ];
