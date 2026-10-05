@@ -109,6 +109,11 @@ footer{border-top:1px solid var(--bd);padding:28px 0;text-align:center;color:var
 footer .socials{margin:0 0 16px}
 /* reveal */
 .rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(hover:hover){
+ .avatar.rv{transition:opacity .7s,transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .35s}
+ .avatar.rv.in:hover{transform:translateY(-5px) scale(1.045);border-color:var(--acc);box-shadow:0 0 0 6px var(--chip),0 0 0 8px var(--bd),0 16px 34px rgba(0,0,0,.3)}
+}
+@media(prefers-reduced-motion:reduce){.avatar.rv,.avatar.rv.in:hover{transition:none;transform:none}}
 @media(max-width:760px){
  .burger{display:grid}.links{position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg);border-bottom:1px solid var(--bd);padding:10px 20px;display:none}
  .links.open{display:flex}.contact{grid-template-columns:1fr}section{padding:56px 0}}
