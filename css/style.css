@@ -37,6 +37,17 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .chip img{width:20px;height:20px;object-fit:contain}
 .chip.sm{padding:3px 10px;font-size:.75rem;background:var(--chip)}
 .skillgrp{margin-bottom:28px}.skillgrp h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);margin-bottom:12px}
+.skillgrp.box{position:relative;padding:24px;border-radius:18px;background:linear-gradient(135deg,var(--card),var(--chip));box-shadow:0 16px 40px rgba(0,0,0,.12);transition:transform .3s,border-color .3s,box-shadow .3s}
+.skillgrp.box:hover{transform:translateY(-4px);border-color:var(--mut);box-shadow:0 20px 48px rgba(0,0,0,.2)}
+.skill-heading{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.skill-heading>div{min-width:0}
+.skill-heading .skill-icon{width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;border:1px solid var(--bd);border-radius:13px;background:var(--chip);font-size:1.15rem}
+.skill-heading h3{margin:0 0 3px;color:var(--fg);font-size:.9rem}
+.skill-heading p{color:var(--mut);font-size:.82rem}
+.skillgrp .chips{gap:9px}
+.skillgrp .chip{background:var(--bg);box-shadow:inset 0 1px rgba(255,255,255,.025)}
+.skillgrp .chip>i{width:18px;text-align:center;color:var(--mut);font-size:1rem}
+.skillgrp .chip:hover>i{color:var(--fg)}
 /* timeline */
 .tl{position:relative;padding-left:28px}.tl:before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:var(--bd)}
 .tl-item{position:relative;margin-bottom:28px}
@@ -72,6 +83,7 @@ footer .socials{margin:0 0 16px}
  .burger{display:grid}.links{position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg);border-bottom:1px solid var(--bd);padding:10px 20px;display:none}
  .links.open{display:flex}.contact{grid-template-columns:1fr}section{padding:56px 0}}
 @media(prefers-reduced-motion:reduce){.rv{transition:none;opacity:1;transform:none}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){.skillgrp.box,.chip{transition:none}.skillgrp.box:hover,.chip:hover{transform:none}}
 /* sub pages */
 .subpage{padding:110px 0 60px;min-height:80vh}
 .back{display:inline-flex;gap:6px;align-items:center;color:var(--mut);font-size:.9rem;margin-bottom:20px;transition:.2s}.back:hover{color:var(--fg);transform:translateX(-3px)}
