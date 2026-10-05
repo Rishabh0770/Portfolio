@@ -141,6 +141,8 @@ footer .socials{margin:0 0 16px}
 .prose code{background:var(--chip);padding:2px 6px;border-radius:6px;font-size:.88em}
 .prose pre{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;overflow-x:auto;margin-bottom:20px}.prose pre code{background:none;padding:0}
 .prose b{color:var(--fg)}.prose ul{list-style:disc;padding-left:22px;color:var(--mut);margin-bottom:18px}
+.hero p.bio,#about>.wrap>.box>p,.tl-item ul,.contact .box>p,.cert-showcase-head p,.lead,.prose p,.feat{text-align:justify;text-align-last:start}
+.card p,#about .grid .box p{text-wrap:pretty}
 @media(max-width:760px){.detail{grid-template-columns:1fr}.pn{grid-template-columns:1fr}.pn a[style]{text-align:left!important}.subpage{padding-top:96px}}
 /* certificates + lightbox */
 .cert-showcase{--cert-accent:var(--fg);position:relative;margin-top:38px;padding:clamp(20px,4vw,38px);overflow:hidden;border:1px solid var(--bd);border-radius:24px;background:radial-gradient(ellipse at 92% 0%,rgba(255,255,255,.045),transparent 38%),linear-gradient(145deg,var(--card),var(--bg) 78%);box-shadow:0 24px 70px rgba(0,0,0,.22)}
