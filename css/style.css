@@ -46,8 +46,35 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .skill-heading p{color:var(--mut);font-size:.82rem}
 .skillgrp .chips{gap:9px}
 .skillgrp .chip{background:var(--bg);box-shadow:inset 0 1px rgba(255,255,255,.025)}
-.skillgrp .chip>i{width:18px;text-align:center;color:var(--mut);font-size:1rem}
-.skillgrp .chip:hover>i{color:var(--fg)}
+.skillgrp .chip>i{width:20px;text-align:center;font-size:1rem;line-height:1}
+.skillgrp .chip .brand-mark{padding:2px;border-radius:50%;background:#fff}
+.skillgrp:first-of-type .skill-icon{color:#61dafb}
+.skillgrp:last-of-type .skill-icon{color:#9b8cff}
+.tool-seo{color:#34a853}
+.tool-analytics{color:#f9ab00}
+.tool-searchconsole{color:#4285f4}
+.tool-business{color:#ea4335}
+.tool-googleads{color:#34a853}
+.tool-meta{color:#0866ff}
+.tool-amazon{color:#ff9900}
+.tool-semrush{color:#ff642d}
+.tool-ahrefs{color:#f04f38}
+.tool-screamingfrog{color:#65b741}
+.tool-gtmetrix{color:#22a6d2}
+.tool-clarity{color:#00a4ef}
+.tool-mailchimp{color:#ffe01b}
+.tool-brevo{color:#0b996e}
+.tool-godaddy{color:#3b82f6}
+.tool-video{color:#e879f9}
+.tool-canva{color:#00c4cc}
+.tool-figma{color:#f24e1e}
+.tool-photoshop{color:#31a8ff}
+.tool-ai{color:#b18cff}
+.tool-node{color:#68a063}
+.tool-mongodb{color:#00ed64}
+.tool-github{color:var(--fg)}
+.tool-vercel{color:var(--fg)}
+.tool-netlify{color:#05bdba}
 /* timeline */
 .tl{position:relative;padding-left:28px}.tl:before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:var(--bd)}
 .tl-item{position:relative;margin-bottom:28px}
