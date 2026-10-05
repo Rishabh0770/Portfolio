@@ -122,7 +122,10 @@ footer .socials{margin:0 0 16px}
 .cert-arrow:hover:not(:disabled){transform:translateY(-2px);border-color:var(--cert-accent);background:var(--cert-accent);color:var(--bg)}
 .cert-arrow:disabled{opacity:.35;cursor:default}
 .cert-viewport{overflow:hidden}
-.cert-track{--cert-gap:18px;display:flex;gap:var(--cert-gap);overflow-x:auto;padding:4px 2px 16px;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain}
+.cert-track{--cert-gap:18px;display:flex;gap:var(--cert-gap);overflow-x:auto;padding:4px 2px 16px;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;cursor:grab;touch-action:pan-x}
+.cert-track.is-dragging{cursor:grabbing;scroll-snap-type:none;scroll-behavior:auto}
+.cert-track.is-dragging *{user-select:none}
+.cert-track img{-webkit-user-drag:none}
 .cert-track::-webkit-scrollbar{display:none}
 .cert-track:focus-visible{outline:2px solid var(--cert-accent);outline-offset:4px;border-radius:12px}
 .cert-track button.cert{position:relative;flex:0 0 calc((100% - var(--cert-gap)*2)/3);min-width:0;padding:0;border-color:var(--bd);border-radius:17px;background:linear-gradient(155deg,var(--chip),var(--card) 65%);color:var(--fg);font:inherit;text-align:left;cursor:pointer;scroll-snap-align:start;box-shadow:0 10px 30px rgba(0,0,0,.12)}

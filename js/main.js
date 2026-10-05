@@ -26,6 +26,44 @@ if(certTrack&&certCards.length&&certCount&&certProgress&&certProgressBar&&certPr
  certPrev.addEventListener('click',()=>scrollCerts(-1));
  certNext.addEventListener('click',()=>scrollCerts(1));
  certTrack.addEventListener('scroll',updateCertCarousel,{passive:true});
+ let dragStartX=0,dragStartScroll=0,isDragging=false,suppressClick=false,suppressClickTimer;
+ certTrack.addEventListener('pointerdown',event=>{
+  if(event.pointerType!=='mouse'||event.button!==0)return;
+  dragStartX=event.clientX;
+  dragStartScroll=certTrack.scrollLeft;
+  isDragging=false;
+  addEventListener('pointermove',dragCerts);
+  addEventListener('pointerup',stopDragging,{once:true});
+  addEventListener('pointercancel',stopDragging,{once:true});
+ });
+ function dragCerts(event){
+  const distance=event.clientX-dragStartX;
+  if(!isDragging&&Math.abs(distance)<6)return;
+  isDragging=true;
+  certTrack.classList.add('is-dragging');
+  certTrack.scrollLeft=dragStartScroll-distance;
+  event.preventDefault();
+ }
+ function stopDragging(){
+  removeEventListener('pointermove',dragCerts);
+  removeEventListener('pointerup',stopDragging);
+  removeEventListener('pointercancel',stopDragging);
+  certTrack.classList.remove('is-dragging');
+  if(isDragging){
+   suppressClick=true;
+   clearTimeout(suppressClickTimer);
+   suppressClickTimer=setTimeout(()=>{suppressClick=false},300);
+  }
+  isDragging=false;
+ }
+ certTrack.addEventListener('click',event=>{
+  if(!suppressClick)return;
+  event.preventDefault();
+  event.stopPropagation();
+  suppressClick=false;
+  clearTimeout(suppressClickTimer);
+ },true);
+ certTrack.addEventListener('dragstart',event=>event.preventDefault());
  addEventListener('resize',updateCertCarousel);
  updateCertCarousel();
 }
