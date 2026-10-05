@@ -47,6 +47,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .skillgrp .chips{gap:9px}
 .skillgrp .chip{background:var(--bg);box-shadow:inset 0 1px rgba(255,255,255,.025)}
 .skillgrp .chip>i{width:20px;text-align:center;font-size:1rem;line-height:1}
+.skillgrp .chip>img.amazon-mark{width:20px;height:20px;object-fit:contain}
 .skillgrp .chip .brand-mark{padding:2px;border-radius:50%;background:#fff}
 .skillgrp:first-of-type .skill-icon{color:#61dafb}
 .skillgrp:last-of-type .skill-icon{color:#9b8cff}
